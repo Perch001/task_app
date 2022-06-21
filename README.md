@@ -12,7 +12,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 
 ## In the future:
-Adding a Database(MongoDB)
+- Adding a Database(MongoDB)
 - Filter
 - Date Search
 - New inputs in the modal window according to the table
