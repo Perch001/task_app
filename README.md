@@ -2,15 +2,14 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Screenshots
+# Screenshots
+![Screenshots(1)](https://user-images.githubusercontent.com/51622640/174816147-5f1628f7-4776-4403-ac0f-7ee68b30baed.png)
 
-![Screenshots(1)](https://user-images.githubusercontent.com/51622640/174813893-9b245a04-b224-47ea-83dc-2ba87a4f4c10.png)
+![Screenshots(2)](https://user-images.githubusercontent.com/51622640/174816992-3a7741fa-29b6-4b3f-aac6-237dd980d39d.png)
 
-![Screenshots(2)](https://user-images.githubusercontent.com/51622640/174813927-f376a6aa-592e-492d-91ff-155082b99305.png)
+![Screenshots(3)](https://user-images.githubusercontent.com/51622640/174817079-3ef76bc8-f582-43c5-8040-b19628673902.png)
 
-![Screenshots(3)](https://user-images.githubusercontent.com/51622640/174814060-a2f71a04-0d54-4735-8c43-aeab83e8db04.png)
 
-![Screenshots(4)](https://user-images.githubusercontent.com/51622640/174814124-dd7560e2-922b-4a8e-b09b-8eef422fe708.png)
 
 ## In the future:
 Adding a Database(MongoDB)
