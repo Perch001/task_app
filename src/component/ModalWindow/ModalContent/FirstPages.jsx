@@ -2,31 +2,43 @@ import React, { useState } from 'react'
 import { useDispatch } from 'react-redux';
 import { DatePicker, Space } from 'antd';
 import { AddCustomerAction } from '../../store/reducer/customer';
+import moment from 'moment';
 
 
 
 function FirstPages() {
     const [phone, setPhone] = useState('');
+    const [status, setStatus] = useState ('active')
+    const [isChecked, setIsChecked] = useState('')
     const [secondPhone, setSecondPhone] = useState('')
     const [address, setAddress] = useState('');
     const [room, setType] = useState('');
     const [roomID, setNumber] = useState('')
-    const [date, setDate] = useState('')
+    const [startDate, setStartDate] = useState(new Date())
+    const [endDate, setEndDate] = useState(new Date())
 
-    console.log(date)
+
+
 
     const dispatch = useDispatch()
-
-    
+    const date = moment(startDate).format('LL')
+    const term = moment(endDate).format('LL')
+    const check = (e) => {
+        setIsChecked(e.target.checked)
+    }
 
     const AddInfo = () => {
         const info = {
             id: Date.now(),
             phone,
+            status,
             secondPhone,
             address,
             room,
-            roomID
+            roomID,
+            date,
+            cost: isChecked ? 'Free' : "???",
+            term
         }
         dispatch(AddCustomerAction(info))
     }
@@ -64,8 +76,10 @@ function FirstPages() {
 
             <div className='phone'>
                 <div>
-                    
-                    
+                    <DatePicker onChange={(date) => setEndDate(date)}/>
+                </div>
+                <div>
+                    <input className='check' type="checkbox" onClick={check}/> Free
                 </div>
             </div>
         </div>
