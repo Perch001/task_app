@@ -3,9 +3,13 @@
 # Screenshots
 ![Screenshots(1)](https://user-images.githubusercontent.com/51622640/174816147-5f1628f7-4776-4403-ac0f-7ee68b30baed.png)
 
-![Screenshots(2)](https://user-images.githubusercontent.com/51622640/174816992-3a7741fa-29b6-4b3f-aac6-237dd980d39d.png)
 
-![Screenshots(3)](https://user-images.githubusercontent.com/51622640/174817079-3ef76bc8-f582-43c5-8040-b19628673902.png)
+## Update 29.06.22
+
+![Screenshots(2)](https://user-images.githubusercontent.com/51622640/176451581-98fe4bf1-f5b5-47d0-a7c1-2e7f1cd60f55.png)
+![Screenshots(3)](https://user-images.githubusercontent.com/51622640/176451695-6be61f07-4979-4891-bd2c-30fab47fa1a2.png)
+
+
 
 
 
