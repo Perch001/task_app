@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux';
 import { DatePicker, Space, Select } from 'antd';
+import { message } from 'antd';
 import { AddCustomerAction } from '../../store/reducer/customer';
 import moment from 'moment';
 const { Option } = Select;
@@ -21,15 +22,30 @@ function FirstPages() {
 
 
 
-const { Option } = Select;
     const dispatch = useDispatch()
+
+
     const date = moment(startDate).format('LL')
     const term = moment(endDate).format('LL')
+
+
+
     const check = (e) => {
         setIsChecked(e.target.checked)
     }
     const handleChange = (value) => {
         setCategory(value);
+    };
+    const handleChangeType = (value) => {
+        setType(value);
+    };
+
+
+    const error = () => {
+        message.error('This is an error message');
+    };
+    const success = () => {
+        message.success('This is a success message');
     };
 
     const AddInfo = () => {
@@ -47,48 +63,59 @@ const { Option } = Select;
             distraction,
             category
         }
+        success()
         dispatch(AddCustomerAction(info))
     }
-   
 
   return (
     <>
         <div>
-            <div className='phone'>
+            <div className='tb-1'>
                 <div>
-                    <div>Phone</div>
+                    <div>Телефон заявителя</div>
                     <input onChange={e => setPhone(e.target.value)}/>
                 </div>
-                <div>
-                    <div>Phone</div>
+                <div className='phone'>
+                    <div>Дополнительный телефон</div>
                     <input onChange={e => setSecondPhone(e.target.value)}/>
                 </div>
             </div>
 
 
-            <div className='phone'>
+            <div className='tb-2'>
                 <div>
-                    <div>Address</div>
+                    <div>Адрес</div>
                     <input onChange={e => setAddress(e.target.value)}/>
                 </div>
                 <div>
-                    <div>Type</div>
-                    <input onChange={e => setType(e.target.value)}/>
+                    <div>Тип помещения</div>
+                    <Select
+                        style={{
+                            width: 200,
+                        }}
+                        placeholder="Тип помещения"
+                        onChange={handleChangeType}
+                    >
+                        <Option value="Жилой&#160;дом">Жилой дом</Option>
+                        <Option value="Квартира">Квартира</Option>
+                        <Option value="Комната">Комната</Option>
+                        <Option value="Другое">Другое</Option>
+                    </Select>
                 </div>
                 <div>
-                    <div>Number</div>
+                    <div>Номер помещения</div>
                     <input onChange={e => setNumber(e.target.value)}/>
                 </div>
             </div>
 
 
 
-            <div className='phone'>
+            <div className='tb-3'>
+                <div>Категории работ</div>
                 <Select
                     mode="multiple"
                     allowClear
                     style={{
-                        marginTop: '20px',
                         width: '100%',
                     }}
                     placeholder="Please select"
@@ -98,28 +125,28 @@ const { Option } = Select;
                     <Option value='Электрика '>Электрика</Option>
                     <Option value='Уборка '>Уборка</Option>
                     <Option value='Отопление '>Отопление</Option>
-                    <Option value='Гарантийные_работы '>Гарантийные работы</Option>
+                    <Option value='Гарантийные&#160;работы '>Гарантийные работы</Option>
                     <Option value='Видеонаблюдение '>Видеонаблюдение</Option>
-                    <Option value='Ремонтные_работы '>Ремонтные работы</Option>
+                    <Option value='Ремонтные&#160;работы '>Ремонтные работы</Option>
                     <Option value='Вентиляция '>Вентиляция</Option>
-                    <Option value='Плотнические_работы '>Плотнические работы</Option>
-                    <Option value='Ремонтные работы '>Ремонтные работы</Option>
-                    <Option value='Дезинфекция_и_дератизация '>Дезинфекция и дератизация</Option>
-                    <Option value='Пожарная_безопасность '>Пожарная безопасность</Option>
+                    <Option value='Плотнические&#160;работы '>Плотнические работы</Option>
+                    <Option value='Ремонтные&#160;работы '>Ремонтные работы</Option>
+                    <Option value='Дезинфекция&#160;и&#160;дератизация '>Дезинфекция и дератизация</Option>
+                    <Option value='Пожарная&#160;безопасность '>Пожарная безопасность</Option>
                     <Option value='Благоустройство '>Благоустройство</Option>
                     <Option value='Домофон '>Домофон</Option>
-                    <Option value='Лифтовое_оборудование '>Лифтовое оборудование</Option>
+                    <Option value='Лифтовое&#160;оборудование '>Лифтовое оборудование</Option>
                     <Option value='Охрана '>Охрана</Option>
                     <Option value='Прочее '>Прочее</Option>
                 </Select>
             </div>
 
 
-            <div className='phone'>
-                <textarea cols="68"  style={{marginBottom: '40px', marginTop: '20px'}} onChange={e => setDescription(e.target.value) }></textarea>
+            <div className='tb-4'>
+                <textarea cols="100" onChange={e => setDescription(e.target.value) }></textarea>
             </div>
 
-            <div className='phone'>
+            <div className='tb-5'>
                 <div>
                     <DatePicker onChange={(date) => setEndDate(date)}/>
                 </div>

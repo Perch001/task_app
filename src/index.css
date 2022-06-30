@@ -4,6 +4,20 @@
     background-color: #f8f8f8;
 }
 
+
+input{
+    padding-right: 50px;
+    border: 1px solid #afafaf9c; 
+    padding-bottom: 5px;
+}
+
+textarea{
+    margin-bottom: 40px;
+    margin-top: 20px;
+}
+.phone{
+    margin-left: 25px;
+}
 .NavBar{
     display: flex;
     background-color: #fff;
@@ -76,12 +90,26 @@
     padding: 5px 10px;
     margin-right: 50px;
 }
-.phone{
+.tb-1{
     display: flex;
+    margin-bottom: 20px;
+}
+.tb-2{
+    display: flex;
+    justify-content: space-between;
 }
 
+.tb-3{
+    margin-top: 20px;
+}
 
-
+.tb-5{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 50px;
+    margin-bottom: 30px;
+}
 
 .check{
     accent-color: #2EB85C;

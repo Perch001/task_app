@@ -29,7 +29,7 @@ function NavButtons() {
 
   return (
     <>
-    <Modal visible={isModalVisible} onOk={handleOk} onCancel={handleCancel} footer={false}>
+    <Modal visible={isModalVisible} onOk={handleOk} onCancel={handleCancel} footer={false} width={700}>
         <ModalWindow/>
       </Modal>
         <div className='NavButtons'>
